@@ -1,0 +1,11 @@
+<div class="note-list">
+    <div *ngFor=" let note of notes">
+        Title: <h2>
+            {{note.title}}
+        </h2>
+        <em>Content:</em>
+        <p>{{note.content}}</p>
+        <button class="btn btn-primary ms-1" (click)="editNote(note)">Edit</button>
+        <button class="btn btn-danger   ms-1" (click)="deleteNote(note.id)">Delete</button>
+    </div>
+</div>
